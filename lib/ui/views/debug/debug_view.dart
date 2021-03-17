@@ -12,7 +12,7 @@ class DebugView extends StatelessWidget {
     return ViewModelBuilder<DebugViewModel>.reactive(
       viewModelBuilder: () => DebugViewModel(),
       builder: (context, vm, child) => Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: Container(
             child: Column(
