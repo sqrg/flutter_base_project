@@ -16,7 +16,7 @@ import 'package:flutter_base_project/core/services/authentication_service.dart';
   dependencies: [
     LazySingleton(classType: ApiClient),
     LazySingleton(classType: DialogService),
-    LazySingleton(classType: ThemeService),
+    LazySingleton(classType: ThemeService, resolveUsing: ThemeService.getInstance),
     LazySingleton(classType: AuthenticationService),
   ],
 )
