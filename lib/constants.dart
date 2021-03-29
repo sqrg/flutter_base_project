@@ -1,3 +1,3 @@
-library constants;
-
 const String API_TOKEN = 'API_TOKEN';
+
+const String DARK_MODE_SELECTED = 'DARK_MODE_SELECTED';
