@@ -6,19 +6,21 @@
 
 // ignore_for_file: public_member_api_docs
 
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
-import '';
 import 'core/api/api_client.dart';
 import 'core/services/authentication_service.dart';
 
 final locator = StackedLocator.instance;
 
-void setupLocator() {
+Future setupLocator() async {
   locator.registerLazySingleton(() => ApiClient());
+  locator.registerLazySingleton(() => AuthenticationService());
   locator.registerLazySingleton(() => DialogService());
   locator.registerLazySingleton(() => ThemeService.getInstance());
-  locator.registerLazySingleton(() => AuthenticationService());
+  final sharedPreferences = await SharedPreferences.getInstance();
+  locator.registerSingleton(sharedPreferences);
 }
