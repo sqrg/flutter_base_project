@@ -7,10 +7,10 @@
 // ignore_for_file: public_member_api_docs
 
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 import 'core/api/api_client.dart';
 import 'core/services/authentication_service.dart';
-import 'core/services/dialog_service.dart';
 
 final locator = StackedLocator.instance;
 

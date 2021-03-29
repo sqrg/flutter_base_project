@@ -7,7 +7,6 @@
 // ignore_for_file: public_member_api_docs
 
 import 'package:flutter/material.dart';
-import 'package:flutter_base_project/core/managers/dialog_manager.dart';
 import 'package:stacked/stacked.dart';
 
 import 'ui/views/debug/debug_view.dart';
@@ -37,7 +36,7 @@ class StackedRouter extends RouterBase {
         orElse: () => DebugViewArguments(),
       );
       return MaterialPageRoute<dynamic>(
-        builder: (context) => DialogManager(child: DebugView(key: args.key)),
+        builder: (context) => DebugView(key: args.key),
         settings: data,
       );
     },

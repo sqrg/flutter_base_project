@@ -288,7 +288,7 @@ packages:
       name: get
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.26.0"
+    version: "4.1.1"
   get_it:
     dependency: transitive
     description:
@@ -478,13 +478,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
-  rflutter_alert:
-    dependency: "direct main"
-    description:
-      name: rflutter_alert
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.2"
   sentry:
     dependency: "direct main"
     description:
@@ -552,7 +545,7 @@ packages:
       name: stacked_services
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.7.3"
+    version: "0.8.0-nullsafety.1"
   stream_channel:
     dependency: transitive
     description:

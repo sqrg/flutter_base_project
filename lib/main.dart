@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base_project/ui/dialog_ui_setup.dart';
+
+import 'package:stacked_services/stacked_services.dart';
 
 import 'package:flutter_base_project/app.locator.dart';
 import 'package:flutter_base_project/app.router.dart';
-import 'package:stacked_services/stacked_services.dart';
 
 void main() {
   setupLocator();
+
+  setupDialogUi();
 
   runApp(MyApp());
 }

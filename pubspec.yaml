@@ -26,7 +26,7 @@ dependencies:
 
   # Architecture
   stacked: ^1.9.7
-  stacked_services: ^0.7.3
+  stacked_services: ^0.8.0-nullsafety.1
 
   # HTTP requests
   dio: ^4.0.0-beta7 # beta so the catcher dependency works
@@ -37,7 +37,6 @@ dependencies:
 
   # Others
   flutter_secure_storage: ^4.1.0
-  rflutter_alert: ^2.0.2
 
 dev_dependencies:
   stacked_generator: ^0.2.6

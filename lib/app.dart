@@ -1,10 +1,10 @@
 import 'package:stacked/stacked_annotations.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 import 'package:flutter_base_project/ui/views/debug/debug_view.dart';
 import 'package:flutter_base_project/ui/views/main_view.dart';
 
 import 'package:flutter_base_project/core/api/api_client.dart';
-import 'package:flutter_base_project/core/services/dialog_service.dart';
 import 'package:flutter_base_project/core/services/authentication_service.dart';
 
 @StackedApp(
