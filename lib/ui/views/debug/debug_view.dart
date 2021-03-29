@@ -12,7 +12,7 @@ class DebugView extends StatelessWidget {
     return ViewModelBuilder<DebugViewModel>.reactive(
       viewModelBuilder: () => DebugViewModel(),
       builder: (context, vm, child) => Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).backgroundColor,
         body: SafeArea(
           child: Container(
             child: Column(
@@ -24,7 +24,7 @@ class DebugView extends StatelessWidget {
                   },
                 ),
                 TextButton(
-                  child: Text('Alert 1'),
+                  child: Text('Alert 1', style: TextStyle(backgroundColor: Theme.of(context).backgroundColor),),
                   onPressed: () {
                     vm.showDialog1();
                   },
@@ -39,6 +39,12 @@ class DebugView extends StatelessWidget {
                   child: Text('Alert 2'),
                   onPressed: () {
                     vm.showConfirmation();
+                  },
+                ),
+                TextButton(
+                  child: Text('Toggle theme'),
+                  onPressed: () {
+                    vm.toggleTheme();
                   },
                 ),
               ],
