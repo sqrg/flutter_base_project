@@ -6,6 +6,7 @@
 
 // ignore_for_file: public_member_api_docs
 
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
@@ -20,6 +21,7 @@ Future setupLocator() async {
   locator.registerLazySingleton(() => ApiClient());
   locator.registerLazySingleton(() => AuthenticationService());
   locator.registerLazySingleton(() => DialogService());
+  locator.registerLazySingleton(() => FlutterSecureStorage());
   locator.registerLazySingleton(() => ThemeService.getInstance());
   final sharedPreferences = await SharedPreferences.getInstance();
   locator.registerSingleton(sharedPreferences);

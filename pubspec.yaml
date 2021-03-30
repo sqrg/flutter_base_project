@@ -35,6 +35,9 @@ dependencies:
   sentry: ^4.0.6
   catcher: ^0.6.3
 
+  # Permission handling
+  permission_handler: ^6.1.1
+
   # Others
   shared_preferences: ^2.0.5
   flutter_secure_storage: ^4.1.0

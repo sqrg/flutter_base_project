@@ -10,13 +10,16 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
 import 'ui/views/debug/debug_view.dart';
+import 'ui/views/login_view.dart';
 import 'ui/views/main_view.dart';
 
 class Routes {
   static const String debugView = '/';
+  static const String loginView = '/login-view';
   static const String mainView = '/main-view';
   static const all = <String>{
     debugView,
+    loginView,
     mainView,
   };
 }
@@ -26,6 +29,7 @@ class StackedRouter extends RouterBase {
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
     RouteDef(Routes.debugView, page: DebugView),
+    RouteDef(Routes.loginView, page: LoginView),
     RouteDef(Routes.mainView, page: MainView),
   ];
   @override
@@ -37,6 +41,15 @@ class StackedRouter extends RouterBase {
       );
       return MaterialPageRoute<dynamic>(
         builder: (context) => DebugView(key: args.key),
+        settings: data,
+      );
+    },
+    LoginView: (data) {
+      var args = data.getArgs<LoginViewArguments>(
+        orElse: () => LoginViewArguments(),
+      );
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => LoginView(key: args.key),
         settings: data,
       );
     },
@@ -57,4 +70,10 @@ class StackedRouter extends RouterBase {
 class DebugViewArguments {
   final Key key;
   DebugViewArguments({this.key});
+}
+
+/// LoginView arguments holder class
+class LoginViewArguments {
+  final Key key;
+  LoginViewArguments({this.key});
 }

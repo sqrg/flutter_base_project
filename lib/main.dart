@@ -7,6 +7,8 @@ import 'package:stacked_themes/stacked_themes.dart';
 import 'package:flutter_base_project/app.locator.dart';
 import 'package:flutter_base_project/app.router.dart';
 
+import 'package:flutter_base_project/core/services/authentication_service.dart';
+
 import 'package:flutter_base_project/ui/dialog_ui_setup.dart';
 import 'package:flutter_base_project/ui/themes/dark_theme.dart';
 import 'package:flutter_base_project/ui/themes/light_theme.dart';
@@ -25,13 +27,23 @@ Future main() async {
 
   bool darkModeSelected = locator<SharedPreferences>().getBool(Constants.DARK_MODE_SELECTED);
 
-  runApp(MyApp(darkModeSelected: darkModeSelected));
+  String initialRoute = await locator<AuthenticationService>().isUserAuthenticated() ? Routes.mainView : Routes.loginView;
+
+  runApp(MyApp(
+    darkModeSelected: darkModeSelected,
+    initialRoute: initialRoute,
+  ));
 }
 
 class MyApp extends StatelessWidget {
   final bool darkModeSelected;
+  final String initialRoute;
 
-  const MyApp({Key key, this.darkModeSelected}) : super(key: key);
+  const MyApp({
+    Key key,
+    this.darkModeSelected,
+    this.initialRoute,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +58,7 @@ class MyApp extends StatelessWidget {
         themeMode: themeMode,
         navigatorKey: StackedService.navigatorKey,
         onGenerateRoute: StackedRouter().onGenerateRoute,
+        initialRoute: initialRoute,
       ),
     );
   }
