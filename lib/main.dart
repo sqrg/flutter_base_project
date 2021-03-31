@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:overlay_support/overlay_support.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
@@ -51,14 +52,16 @@ class MyApp extends StatelessWidget {
       lightTheme: getLightTheme(),
       darkTheme: getDarkTheme(),
       defaultThemeMode: darkModeSelected ?? false ? ThemeMode.dark : ThemeMode.light,
-      builder: (context, theme, darkTheme, themeMode) => MaterialApp(
-        title: 'Flutter Base Project',
-        theme: theme,
-        darkTheme: darkTheme,
-        themeMode: themeMode,
-        navigatorKey: StackedService.navigatorKey,
-        onGenerateRoute: StackedRouter().onGenerateRoute,
-        initialRoute: initialRoute,
+      builder: (context, theme, darkTheme, themeMode) => OverlaySupport(
+        child: MaterialApp(
+          title: 'Flutter Base Project',
+          theme: theme,
+          darkTheme: darkTheme,
+          themeMode: themeMode,
+          navigatorKey: StackedService.navigatorKey,
+          onGenerateRoute: StackedRouter().onGenerateRoute,
+          initialRoute: initialRoute,
+        ),
       ),
     );
   }

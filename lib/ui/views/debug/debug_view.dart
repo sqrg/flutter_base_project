@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:stacked/stacked.dart';
 
+import 'package:flutter_base_project/app.router.dart';
+
 import 'package:flutter_base_project/core/viewmodels/debug/debug_viewmodel.dart';
 
 class DebugView extends StatelessWidget {
@@ -15,16 +17,20 @@ class DebugView extends StatelessWidget {
         backgroundColor: Theme.of(context).backgroundColor,
         body: SafeArea(
           child: Container(
+            margin: EdgeInsets.only(top: 40),
             child: Column(
               children: [
                 TextButton(
                   child: Text('Sarasa'),
                   onPressed: () {
-                    Navigator.pushNamed(context, 'login');
+                    Navigator.pushNamed(context, Routes.loginView);
                   },
                 ),
                 TextButton(
-                  child: Text('Alert 1', style: TextStyle(backgroundColor: Theme.of(context).backgroundColor),),
+                  child: Text(
+                    'Alert 1',
+                    style: TextStyle(backgroundColor: Theme.of(context).backgroundColor),
+                  ),
                   onPressed: () {
                     vm.showDialog1();
                   },
@@ -45,6 +51,18 @@ class DebugView extends StatelessWidget {
                   child: Text('Toggle theme'),
                   onPressed: () {
                     vm.toggleTheme();
+                  },
+                ),
+                TextButton(
+                  child: Text('Notification'),
+                  onPressed: () {
+                    vm.showNotification();
+                  },
+                ),
+                TextButton(
+                  child: Text('Toast'),
+                  onPressed: () {
+                    vm.showToast();
                   },
                 ),
               ],

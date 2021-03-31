@@ -10,6 +10,7 @@ import 'package:flutter_base_project/ui/views/main_view.dart';
 
 import 'package:flutter_base_project/core/api/api_client.dart';
 import 'package:flutter_base_project/core/services/authentication_service.dart';
+import 'package:flutter_base_project/core/services/overlay_service.dart';
 
 @StackedApp(
   routes: [
@@ -22,8 +23,8 @@ import 'package:flutter_base_project/core/services/authentication_service.dart';
     LazySingleton(classType: AuthenticationService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: FlutterSecureStorage),
+    LazySingleton(classType: OverlayService),
     LazySingleton(classType: ThemeService, resolveUsing: ThemeService.getInstance),
-
     Presolve(classType: SharedPreferences, presolveUsing: SharedPreferences.getInstance),
   ],
 )

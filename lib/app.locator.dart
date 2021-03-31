@@ -14,6 +14,7 @@ import 'package:stacked_themes/stacked_themes.dart';
 
 import 'core/api/api_client.dart';
 import 'core/services/authentication_service.dart';
+import 'core/services/overlay_service.dart';
 
 final locator = StackedLocator.instance;
 
@@ -22,6 +23,7 @@ Future setupLocator() async {
   locator.registerLazySingleton(() => AuthenticationService());
   locator.registerLazySingleton(() => DialogService());
   locator.registerLazySingleton(() => FlutterSecureStorage());
+  locator.registerLazySingleton(() => OverlayService());
   locator.registerLazySingleton(() => ThemeService.getInstance());
   final sharedPreferences = await SharedPreferences.getInstance();
   locator.registerSingleton(sharedPreferences);
