@@ -25,15 +25,15 @@ dependencies:
     sdk: flutter
 
   # Architecture
-  stacked: ^2.0.0
-  stacked_services: ^0.8.0-nullsafety.1
+  stacked: ^2.0.2
+  stacked_services: ^0.8.2
 
   # HTTP requests
-  dio: ^4.0.0-beta7 # beta so the catcher dependency works
+  dio: ^4.0.0
 
   # Error catching and handling
-  sentry: ^4.0.6
-  catcher: ^0.6.3
+  sentry: ^5.0.0
+  catcher: ^0.6.5
 
   # Permission handling
   permission_handler: ^6.1.1
@@ -41,11 +41,11 @@ dependencies:
   # Others
   shared_preferences: ^2.0.5
   flutter_secure_storage: ^4.1.0
-  stacked_themes: ^0.3.0
+  stacked_themes: ^0.3.2
   overlay_support: ^1.2.0
 
 dev_dependencies:
-  stacked_generator: ^0.3.1-nullsafety.3
+  stacked_generator: ^0.3.2
   build_runner:
   flutter_test:
     sdk: flutter
