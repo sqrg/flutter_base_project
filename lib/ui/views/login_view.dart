@@ -37,6 +37,7 @@ class LoginView extends StatelessWidget {
                   borderColor: Colors.blue,
                   suffixIcon: Icons.person,
                   suffixColor: Colors.blue,
+                  labelText: 'Username',
                 ),
               ),
               Container(

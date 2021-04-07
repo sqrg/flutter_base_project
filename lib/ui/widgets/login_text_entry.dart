@@ -7,6 +7,7 @@ class LoginTextEntry extends StatelessWidget {
     this.backgroundColor = Colors.white,
     this.borderColor = Colors.red,
     this.obscureText = false,
+    this.labelText,
     this.suffixIcon,
     this.suffixColor = Colors.red,
   }) : super(key: key);
@@ -15,6 +16,7 @@ class LoginTextEntry extends StatelessWidget {
   final Color backgroundColor;
   final Color borderColor;
   final bool obscureText;
+  final String labelText;
   final IconData suffixIcon;
   final Color suffixColor;
 
@@ -32,6 +34,7 @@ class LoginTextEntry extends StatelessWidget {
         controller: controller,
         obscureText: obscureText,
         decoration: InputDecoration(
+          labelText: labelText,
           border: InputBorder.none,
           suffixIcon: Icon(
             suffixIcon,
