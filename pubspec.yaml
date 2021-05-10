@@ -25,8 +25,8 @@ dependencies:
     sdk: flutter
 
   # Architecture
-  stacked: ^2.0.2
-  stacked_services: ^0.8.2
+  stacked: ^2.1.1
+  stacked_services: ^0.8.5
 
   # HTTP requests
   dio: ^4.0.0
@@ -45,7 +45,7 @@ dependencies:
   overlay_support: ^1.2.0
 
 dev_dependencies:
-  stacked_generator: ^0.3.2
+  stacked_generator: ^0.4.1
   build_runner:
   flutter_test:
     sdk: flutter
