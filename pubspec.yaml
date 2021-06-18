@@ -5,17 +5,7 @@ description: A new Flutter project.
 # pub.dev using `pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 0.0.1+1
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -25,8 +15,9 @@ dependencies:
     sdk: flutter
 
   # Architecture
-  stacked: ^2.1.1
-  stacked_services: ^0.8.5
+  stacked: ^2.1.9
+  stacked_services: ^0.8.7
+  stacked_themes: ^0.3.5
 
   # HTTP requests
   dio: ^4.0.0
@@ -36,16 +27,16 @@ dependencies:
   catcher: ^0.6.5
 
   # Permission handling
-  permission_handler: ^6.1.1
+  permission_handler: ^8.1.1
 
   # Others
-  shared_preferences: ^2.0.5
-  flutter_secure_storage: ^4.1.0
-  stacked_themes: ^0.3.2
-  overlay_support: ^1.2.0
+  flutter_secure_storage: ^4.2.0
+  google_fonts: ^2.1.0
+  overlay_support: ^1.2.1
+  shared_preferences: ^2.0.6
 
 dev_dependencies:
-  stacked_generator: ^0.4.1
+  stacked_generator: ^0.4.8
   build_runner:
   flutter_test:
     sdk: flutter
