@@ -15,7 +15,7 @@ class MainView extends StatefulWidget {
 }
 
 class MainViewState extends State<MainView> with TickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
 
   var tabsList = [
     Tab1View(),

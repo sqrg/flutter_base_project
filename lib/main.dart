@@ -26,7 +26,7 @@ Future main() async {
 
   setupDialogUi();
 
-  bool darkModeSelected = locator<SharedPreferences>().getBool(Constants.DARK_MODE_SELECTED);
+  bool? darkModeSelected = locator<SharedPreferences>().getBool(Constants.DARK_MODE_SELECTED);
 
   String initialRoute = await locator<AuthenticationService>().isUserAuthenticated() ? Routes.mainView : Routes.loginView;
 
@@ -37,11 +37,11 @@ Future main() async {
 }
 
 class MyApp extends StatelessWidget {
-  final bool darkModeSelected;
-  final String initialRoute;
+  final bool? darkModeSelected;
+  final String? initialRoute;
 
   const MyApp({
-    Key key,
+    Key? key,
     this.darkModeSelected,
     this.initialRoute,
   }) : super(key: key);

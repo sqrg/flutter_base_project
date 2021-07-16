@@ -7,7 +7,7 @@ import 'package:flutter_base_project/app.router.dart';
 import 'package:flutter_base_project/core/viewmodels/debug/debug_viewmodel.dart';
 
 class DebugView extends StatelessWidget {
-  DebugView({Key key}) : super(key: key);
+  DebugView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

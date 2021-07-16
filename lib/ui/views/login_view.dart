@@ -7,7 +7,7 @@ import 'package:flutter_base_project/core/viewmodels/login_viewmodel.dart';
 import 'package:flutter_base_project/ui/widgets/login_text_entry.dart';
 
 class LoginView extends StatelessWidget {
-  LoginView({Key key}) : super(key: key);
+  LoginView({Key? key}) : super(key: key);
 
   static const routeName = 'login';
 
@@ -23,7 +23,7 @@ class LoginView extends StatelessWidget {
 
     return ViewModelBuilder.reactive(
       viewModelBuilder: () => LoginViewModel(),
-      builder: (context, vm, child) => Scaffold(
+      builder: (context, dynamic vm, child) => Scaffold(
         body: Container(
           padding: EdgeInsets.symmetric(horizontal: 15),
           child: Column(

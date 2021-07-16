@@ -68,12 +68,12 @@ class StackedRouter extends RouterBase {
 
 /// DebugView arguments holder class
 class DebugViewArguments {
-  final Key key;
+  final Key? key;
   DebugViewArguments({this.key});
 }
 
 /// LoginView arguments holder class
 class LoginViewArguments {
-  final Key key;
+  final Key? key;
   LoginViewArguments({this.key});
 }

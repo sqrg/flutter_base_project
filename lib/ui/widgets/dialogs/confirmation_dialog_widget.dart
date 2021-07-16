@@ -4,9 +4,9 @@ import 'package:stacked_services/stacked_services.dart';
 
 class ConfirmationDialog extends StatelessWidget {
   const ConfirmationDialog({
-    Key key,
-    @required this.request,
-    @required this.completer,
+    Key? key,
+    required this.request,
+    required this.completer,
   }) : super(key: key);
 
   final DialogRequest request;

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 class OkDialog extends StatelessWidget {
-  final DialogRequest request;
-  final Function(DialogResponse) completer;
-  const OkDialog({Key key, this.request, this.completer}) : super(key: key);
+  final DialogRequest? request;
+  final Function(DialogResponse)? completer;
+  const OkDialog({Key? key, this.request, this.completer}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,9 @@ class OkDialog extends StatelessWidget {
 }
 
 class KoDialog extends StatelessWidget {
-  final DialogRequest request;
-  final Function(DialogResponse) completer;
-  const KoDialog({Key key, this.request, this.completer}) : super(key: key);
+  final DialogRequest? request;
+  final Function(DialogResponse)? completer;
+  const KoDialog({Key? key, this.request, this.completer}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +36,15 @@ class KoDialog extends StatelessWidget {
 
 class BaseAlertDialog extends StatelessWidget {
   const BaseAlertDialog({
-    Key key,
-    @required this.request,
-    @required this.completer,
-    @required this.icon,
-    @required this.color,
+    Key? key,
+    required this.request,
+    required this.completer,
+    required this.icon,
+    required this.color,
   }) : super(key: key);
 
-  final DialogRequest request;
-  final Function(DialogResponse response) completer;
+  final DialogRequest? request;
+  final Function(DialogResponse response)? completer;
   final IconData icon;
   final MaterialColor color;
 
@@ -62,20 +62,20 @@ class BaseAlertDialog extends StatelessWidget {
               size: 100,
             ),
             Text(
-              request.title ?? '',
+              request!.title ?? '',
               textAlign: TextAlign.center,
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
             ),
             Container(
               margin: EdgeInsets.symmetric(vertical: 15),
               child: Text(
-                request.description ?? '',
+                request!.description ?? '',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 18),
               ),
             ),
             GestureDetector(
-              onTap: () => completer(DialogResponse(confirmed: true)),
+              onTap: () => completer!(DialogResponse(confirmed: true)),
               child: Container(
                 width: double.infinity,
                 padding: EdgeInsets.symmetric(vertical: 10),
@@ -85,7 +85,7 @@ class BaseAlertDialog extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Text(
-                  request.mainButtonTitle ?? 'OK',
+                  request!.mainButtonTitle ?? 'OK',
                   style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),

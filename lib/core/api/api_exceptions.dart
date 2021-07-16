@@ -1,6 +1,6 @@
 class ApiException implements Exception {
-  String message;
-  String prefix;
+  String? message;
+  String? prefix;
 
   ApiException([this.message, this.prefix]);
 
@@ -22,7 +22,7 @@ class NotAllowedException extends ApiException {
 }
 
 class ValidationException extends ApiException {
-  Map<String, dynamic> errors;
+  Map<String, dynamic>? errors;
 
   ValidationException([message, this.errors]) : super(message, 'Validation errors');
 

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class LoginTextEntry extends StatelessWidget {
   const LoginTextEntry({
-    Key key,
-    @required this.controller,
+    Key? key,
+    required this.controller,
     this.backgroundColor = Colors.white,
     this.borderColor = Colors.red,
     this.obscureText = false,
@@ -16,8 +16,8 @@ class LoginTextEntry extends StatelessWidget {
   final Color backgroundColor;
   final Color borderColor;
   final bool obscureText;
-  final String labelText;
-  final IconData suffixIcon;
+  final String? labelText;
+  final IconData? suffixIcon;
   final Color suffixColor;
 
   @override

@@ -7,7 +7,7 @@ import 'package:flutter_base_project/core/services/authentication_service.dart';
 import 'package:flutter_base_project/constants.dart' as Constants;
 
 class LoginViewModel extends BaseViewModel {
-  final _secureStorage = FlutterSecureStorage();
+  FlutterSecureStorage _secureStorage = locator<FlutterSecureStorage>();
 
   AuthenticationService _authenticationService = locator<AuthenticationService>();
 

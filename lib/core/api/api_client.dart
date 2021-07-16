@@ -9,7 +9,7 @@ class ApiClient {
 
   Dio _dio = Dio();
 
-  Future<dynamic> get(String endpoint, {Map<String, String> headers, Map<String, dynamic> queryParameters}) async {
+  Future<dynamic> get(String endpoint, {Map<String, String>? headers, Map<String, dynamic>? queryParameters}) async {
     var responseJson;
 
     try {
@@ -23,7 +23,7 @@ class ApiClient {
     return responseJson;
   }
 
-  Future<dynamic> post(String endpoint, {Map<String, String> headers, Map<String, dynamic> body}) async {
+  Future<dynamic> post(String endpoint, {Map<String, String>? headers, Map<String, dynamic>? body}) async {
     var responseJson;
 
     try {
