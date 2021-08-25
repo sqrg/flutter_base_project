@@ -9,8 +9,6 @@ import 'package:flutter_base_project/ui/widgets/login_text_entry.dart';
 class LoginView extends StatelessWidget {
   LoginView({Key? key}) : super(key: key);
 
-  static const routeName = 'login';
-
   final TextEditingController username = TextEditingController(text: '');
   final TextEditingController password = TextEditingController(text: '');
 
@@ -21,9 +19,9 @@ class LoginView extends StatelessWidget {
       password.text = '';
     }
 
-    return ViewModelBuilder.reactive(
+    return ViewModelBuilder<LoginViewModel>.reactive(
       viewModelBuilder: () => LoginViewModel(),
-      builder: (context, dynamic vm, child) => Scaffold(
+      builder: (context, vm, child) => Scaffold(
         body: Container(
           padding: EdgeInsets.symmetric(horizontal: 15),
           child: Column(
@@ -48,6 +46,12 @@ class LoginView extends StatelessWidget {
                   suffixIcon: Icons.lock,
                 ),
               ),
+              TextButton(
+                onPressed: () async {
+                  await vm.login(username.text, password.text);
+                },
+                child: Text('LOGIN'),
+              )
             ],
           ),
         ),

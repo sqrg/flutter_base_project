@@ -8,8 +8,6 @@ import 'package:flutter_base_project/ui/views/tabs/tab1_view.dart';
 import 'package:flutter_base_project/ui/views/tabs/tab2_view.dart';
 
 class MainView extends StatefulWidget {
-  static const routeName = 'main';
-
   @override
   MainViewState createState() => MainViewState();
 }
