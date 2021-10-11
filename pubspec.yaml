@@ -15,8 +15,8 @@ dependencies:
     sdk: flutter
 
   # Architecture
-  stacked: ^2.2.2
-  stacked_services: ^0.8.10
+  stacked: ^2.2.7
+  stacked_services: ^0.8.15
   stacked_themes: ^0.3.6
 
   # HTTP requests
@@ -33,10 +33,10 @@ dependencies:
   flutter_secure_storage: ^4.2.0
   google_fonts: ^2.1.0
   overlay_support: ^1.2.1
-  shared_preferences: ^2.0.6
+  shared_preferences: ^2.0.7
 
 dev_dependencies:
-  stacked_generator: ^0.5.0
+  stacked_generator: ^0.5.3
   build_runner:
   flutter_test:
     sdk: flutter
