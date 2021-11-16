@@ -20,7 +20,7 @@ Future main() async {
   // See: https://stackoverflow.com/a/57775690/2584335
   WidgetsFlutterBinding.ensureInitialized();
 
-  setupLocator();
+  await setupLocator();
 
   await ThemeManager.initialise();
 
